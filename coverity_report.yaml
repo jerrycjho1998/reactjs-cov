@@ -1,0 +1,34 @@
+version:
+  schema-version: 6
+
+#### 請填入各公司資訊
+connection:
+  url: https://<hostname>:<port>
+  username: admin
+project: 專案名稱
+title-page:
+  company-name: 公司名稱
+  organizational-unit-name: 單位名稱
+  organizational-unit-term: 單位
+  project-name: 專案名稱
+  project-version: 專案版本
+  project-contact-email: user@xxx.com
+  prepared-for: 客戶
+  prepared-by: xxx
+####
+
+issue-cutoff-count: 10000
+snapshot-id:
+snapshot-date:
+issue-kind:
+
+################## Coverity Integrity Report #############
+cir-report:
+    include-low-impact: true
+###########################################################
+
+disa-stig:
+  version: V5
+report-cwe-version:
+  owasp:
+    2021

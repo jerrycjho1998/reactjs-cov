@@ -1,0 +1,7 @@
+commit:
+  connect:
+    on-new-cert: trust
+    auth-key-file: auth-key.txt
+    project: <Your project name>
+    stream: <Your stream name>
+    url: https://<Your Coverity Connect hostname>:443

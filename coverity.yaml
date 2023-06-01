@@ -1,0 +1,42 @@
+#commit:
+#  connect:
+#    on-new-cert: trust
+#    auth-key-file: auth-key.txt
+#    project: <Your project name>
+#    stream: <Your stream name>
+#    url: https://<Your Coverity Connect hostname>:443
+
+capture:
+  build:
+    clean-command: "msbuild /t:clean <SolutionName>.sln"
+    build-command: "msbuild  /t:build <SolutionName>.sln"
+    #cov-build-args:
+  #security-da: false
+  #compiler-configuration:
+  #cov-configure:
+    #- ["--gcc"]
+    #- ["--compiler", "cc", "--comptype", "gcc", "--template"]
+    #- ["--compiler", "c++", "--comptype", "g++", "--template"]
+    #- ["--clang"]
+    #- ["--msvc"]
+    #- ["--cs"]
+    #- ["--java"]
+    #- ["--kotlin"]
+    #- ["--go"]
+    #- ["--template", "--compiler", "arm-linux-gnueabi-gcc", "--comptype", "armcc"]
+
+analyze:
+  checkers:
+    default: true
+    all: true
+    #android-security: true
+    webapp-security:
+      aggressiveness-level: high
+    audit: true
+    #checker-config:
+  aggressiveness-level: high
+  #coding-standards:
+  #cov-analyze-args:
+  
+  #trust:
+  #location: local
